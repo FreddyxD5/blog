@@ -69,4 +69,91 @@ body {
   font-weight: 700;
   line-height: 1.1;
   margin: 0;
+  padding-top: 40px;
+}
+.intro-me p{
+  padding-top: 20px;
+}
+
+.footer-content{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;      
+  text-align: center;
+}
+
+.post-item:hover{
+  text-decoration: underline  rgb(63, 230, 63);
+  text-decoration-thickness: 0.1rem;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-between;
+}
+
+.latest-post-title {  
+  font-size: 1.5rem;
+  font-weight: 700;
+  
+}
+.latest-post{
+  display: grid;
+  column-gap: 2rem;
+}
+
+
+.wrapper-intro{
+  display: flex;
+  flex-direction: row;
+  align-content: space-around;
+}
+
+.decoration-image{
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+.decoration-image .image-intro{
+  max-width: 350px;
+  height: auto;
+}
+
+.title > a{    
+  background-color: red;
+  border-bottom: 3px solid #df05c2;
+}
+
+.latest-post > a{
+  margin-top: 10;
+  border-bottom: 1px solid #393a3a;
+}
+
+.link-container{
+  display: flex;
+  gap:1rem;
+  justify-content: space-between;
+}
+.link-container h3{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.link-container time{
+  color:rgba(253, 125, 4, 1);
+  font-weight: 200;
+}
+@media (max-width: 480px) {
+  .wrapper-intro{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+  }  
+  .decoration-image .image-intro{
+    max-width: 100%;
+    height: auto;
+  }
+  
 }
