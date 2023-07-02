@@ -74,6 +74,9 @@ export default function Home() {
           }
           </div>
       </section>
+      <section className='stack-content'>
+        <h1 className='font-source latest-post-title'>Stack</h1>
+      </section>
 
     </section>
     <Footer/>

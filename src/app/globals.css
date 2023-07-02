@@ -94,7 +94,9 @@ body {
   align-content: space-around;
   justify-content: space-between;
 }
-
+.blog-content{
+  margin-bottom: 1.5rem;
+}
 .latest-post-title {  
   font-size: 1.5rem;
   font-weight: 700;
@@ -146,6 +148,11 @@ body {
   font-weight: 200;
 }
 @media (max-width: 480px) {
+  .layout{
+    padding:  0 1rem;
+    margin: 1.5rem;  
+  }
+
   .wrapper-intro{
     display: flex;
     flex-direction: column;
