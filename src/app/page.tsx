@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { useState,useEffect } from 'react'
 import Link from 'next/link';
 import BlogItems from './components/card';
+import StackItems from './components/stackItem';
 import Footer from './components/Footer';
 
 
@@ -36,9 +37,41 @@ const data_blog = [
     "date":"20 Marzo, 2023",
   }
 ]
+const data_stack = [
+  {
+    "id":1,
+    "title":"Python",
+    "content":"lorem ipsum dolor sit amet, consectetur adipis",
+    "slug":"holitas-de-mar",
+    "date":"20 Febrero, 2023",
+  },
+  {
+    "id":2,
+    "title":"Javacript",
+    "content":"lorem ipsum dolor sit amet, consectetur adipis",
+    "slug":"holitas",
+    "date":"20 Marzo, 2023",
+  },
+  {
+    "id":3,
+    "title":"Django",
+    "content":"lorem ipsum dolor sit amet, consectetur adipis",
+    "slug":"holitas",
+    "date":"20 Marzo, 2023",
+  },
+  {
+    "id":3,
+    "title":"React",
+    "content":"lorem ipsum dolor sit amet, consectetur adipis",
+    "slug":"holitas",
+    "date":"20 Marzo, 2023",
+  }
+]
+
 
 export default function Home() {  
   const [datosBlog, setDatosBlog] = useState(data_blog)  
+  const [datosStack, setDatosStack] = useState(data_stack)  
 
   return (   
     <>
@@ -76,10 +109,18 @@ export default function Home() {
       </section>
       <section className='stack-content'>
         <h1 className='font-source latest-post-title'>Stack</h1>
+        <div className='stack-items'>
+        {
+          datosStack && datosStack.length>0?
+          datosStack.map((data)=>(
+            <StackItems data={data}  key = {data.id}/>
+          )): <h1>No infoo</h1>
+        }
+        </div>
+        
       </section>
-
     </section>
-    <Footer/>
+    
     </> 
   )
 }
